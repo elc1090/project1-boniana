@@ -1,25 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; outline: 0; border: 0; box-sizing: border-box; }
 
 html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
-    min-height: 100dvh;
-    padding-top: 32px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 32px;
+
+    min-height: 100dvh;
+    padding-top: 32px;
+
     background: linear-gradient(to right bottom, #ef9e9e, #f0f0f0, #735dc3);
 }
 
@@ -29,23 +25,26 @@ h1 {
 }
 
 ol {
-    text-align: center;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 24px;
+
     list-style: none;
+    text-align: center;
 }
 
 li {
-    box-shadow: 0px 0px 40px #00000022;
+    grid-column: span 2;
     border-radius: 16px;
+    max-width: 250px;
     padding: 4px;
+
     background-color: #ffffff66;
     backdrop-filter: blur(4px);
-    grid-column: span 2;
-    max-width: 250px;
+    box-shadow: 0px 0px 40px #00000022;
 }
-#li4 { grid-column: 2/span 2; }
+
+li:nth-last-child(2) { grid-column: 2/span 2; }
 
 .rank-image {
     object-fit: cover;
